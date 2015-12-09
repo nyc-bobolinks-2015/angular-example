@@ -1,7 +1,15 @@
-var app = angular.module('steven', []);
+//First we define our module
+angular.module('steven', []);
 
-app.controller('MainController', function($scope, $http) {
+/* From now forward `angular.module('steven')` will return our module and we can 
+attach controllers, services etc to it.
+*/
+angular.module('steven').controller('MainController', function($scope, $http) {
 
+  /* 
+    functions defined on the scope are accessible to html event handler attributes, so an 
+    element with onclick="removeSomething()" will cause this function to run on click
+  */
   $scope.removeSomething = function() {
     $scope.sampleArray.pop();
   };

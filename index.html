@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample Angular App</title>
+  <script type="text/javascript" src="angular.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-app="steven">
+
+<div ng-controller="MainController">
+   {{data}}
+  <ul>
+    <li ng-repeat="item in data">{{item}}</li>
+  </ul>
+
+<div ng-repeat="item in redditArray">
+  <h2 ng-bind="item.data.title"></h2>
+  <a href="{{item.data.url}}">source</a>
+  <a href="http://reddit.com{{item.data.permalink}}">reddit item</a>
+</div>
+
+</div>
+
+
+</body>
+</html>

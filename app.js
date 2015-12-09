@@ -15,7 +15,6 @@ angular.module('steven').controller('MainController', function($scope, $http) {
   };
 
   $scope.addSomething = function() {
-
     var max = Math.max(0, Math.max.apply(null, $scope.sampleArray));
     $scope.sampleArray.push(max+1);
   };
@@ -23,10 +22,10 @@ angular.module('steven').controller('MainController', function($scope, $http) {
   $scope.sampleArray = [1,2,3,4,5];
 
   /* 
-  Now let's load some stuff from reddit
-  You might also want to look at the docs for ngResource at 
-  (https://docs.angularjs.org/api/ngResource/service/$resource) 
-  It simplifies talking to REST APIs
+    Now let's load some stuff from reddit
+    You might also want to look at the docs for ngResource at 
+    (https://docs.angularjs.org/api/ngResource/service/$resource) 
+    ngResource simplifies talking to REST APIs
   */
 
   $http({
